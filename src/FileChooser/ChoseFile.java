@@ -1,6 +1,8 @@
 package FileChooser;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,20 +11,25 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class ChoseFile extends Component implements ActionListener{
-    //Select two txt file to compate them
+    //Select two txt file to compare them
+    private JFileChooser fc_1=new JFileChooser();
+    private JFileChooser fc_2=new JFileChooser();
+
     private FileInputStream fin_1;
     private FileInputStream fin_2;
+
     private boolean select1=false;
     private boolean select2=false;
     private boolean isSame = true;
+
     private JButton button_1 ;
     private JButton button_2;
     private JButton button_3;
 
     ChoseFile(){
-        JFrame frame = new JFrame();
+        JFrame frame = new JFrame("File Compare");
         frame.setLayout(new FlowLayout());
-        frame.setSize(200,300);
+        frame.setSize(300,200);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         button_1= new JButton("File Selected 1");
         button_2= new JButton("File Selected 2");
@@ -38,8 +45,6 @@ public class ChoseFile extends Component implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-        JFileChooser fc_1=new JFileChooser();
-        JFileChooser fc_2=new JFileChooser();
 
         if (actionEvent.getSource()==button_1){
             int i=fc_1.showOpenDialog(this);
