@@ -5,12 +5,20 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class ChoseFile extends Component implements ActionListener{
+    
+    private FileInputStream fin_1;
+    private FileInputStream fin_2;
+    private boolean select1=false;
+    private boolean select2=false;
+    private boolean isSame = true;
     private JButton button_1 ;
     private JButton button_2;
     private JButton button_3;
+
     ChoseFile(){
         JFrame frame = new JFrame();
         frame.setLayout(new FlowLayout());
@@ -34,18 +42,30 @@ public class ChoseFile extends Component implements ActionListener{
         JFileChooser fc_2=new JFileChooser();
 
         if (actionEvent.getSource()==button_1){
-            fc_1.showOpenDialog(this);
+            int i=fc_1.showOpenDialog(this);
+            if (i==JFileChooser.APPROVE_OPTION){
+                try {
+                    fin_1 = new FileInputStream(fc_1.getSelectedFile());
+                    select1=true;
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
         }
         if (actionEvent.getSource()==button_2){
-            fc_2.showOpenDialog(this);
+            int i=fc_2.showOpenDialog(this);
+            if (i==JFileChooser.APPROVE_OPTION){
+                try {
+                    fin_2 = new FileInputStream(fc_2.getSelectedFile());
+                    select2=true;
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
         }
         if (actionEvent.getSource()==button_3){
-            if (fc_1.getSelectedFile() != null & fc_2.getSelectedFile() != null){
-                boolean isSame = true;
+            if (select1 & select2){
                 try {
-                    FileInputStream fin_1 = new FileInputStream(fc_1.getSelectedFile());
-                    FileInputStream fin_2 = new FileInputStream(fc_2.getSelectedFile());
-
                     do {
                         if (fin_1.read()!=fin_2.read()) {
                             isSame = false;
@@ -54,9 +74,9 @@ public class ChoseFile extends Component implements ActionListener{
                     } while (fin_1.read() != -1 & fin_2.read() != -1);
 
                     if( isSame )
-                        JOptionPane.showMessageDialog(null, "Files are same");
+                        JOptionPane.showMessageDialog(null, "Files are Same");
                     else
-                        JOptionPane.showMessageDialog(null, "Files are NOT same");
+                        JOptionPane.showMessageDialog(null, "Files are NOT Same");
 
                 }catch (IOException e) {
                     e.printStackTrace();
