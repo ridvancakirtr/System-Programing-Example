@@ -9,7 +9,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class ChoseFile extends Component implements ActionListener{
-
+    //Select two txt file to compate them
     private FileInputStream fin_1;
     private FileInputStream fin_2;
     private boolean select1=false;
