@@ -1,5 +1,5 @@
 # System-Programing-Example
-Exercise 1: Develop a program that gets student name, midterm and final grades of 5
+ <b>Exercise 1: </b> Develop a program that gets student name, midterm and final grades of 5
 students from user with JOptionPane window, and calculate average of each students.
 Then, averages should be kept on an array. Calculate general average by using those
 averages from array.<br>
