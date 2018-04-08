@@ -4,7 +4,7 @@ import java.io.FileOutputStream;
 
 public class Exercises_3 {
     Exercises_3(){
-        //Read File Data
+        //Write File Data
         String data ="Cyprus International University";
         try {
             FileOutputStream fout=new FileOutputStream("JavaFile.txt");
