@@ -33,6 +33,7 @@ student number from ArrayList.
 
 <a href="https://github.com/ridvancakirtr/System-Programing-Example/blob/master/src/Laboratory_Exercises_1/Exercises_5.java" rel="nofollow">Exercise 5 Source Code</a>
 <h3>File Exercises -> Read Write File Buffered Input Using</h3>
+
 <b>Exercises 1: </b> Reading sentence in parentheses : 
 <a href="https://github.com/ridvancakirtr/System-Programing-Example/tree/master/src/FileExercises/Exercises_1.java">Exercises 1 Source Code</a>
 
