@@ -1,4 +1,5 @@
-# System Programing Example || Cyprus International University
+# System Programing Example
+<h3>Cyprus International University</h3>
  <b>Exercise 1: </b> Develop a program that gets student name, midterm and final grades of 5
 students from user with JOptionPane window, and calculate average of each students.
 Then, averages should be kept on an array. Calculate general average by using those
