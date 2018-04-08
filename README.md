@@ -2,8 +2,8 @@
  <b>Exercise 1: </b> Develop a program that gets student name, midterm and final grades of 5
 students from user with JOptionPane window, and calculate average of each students.
 Then, averages should be kept on an array. Calculate general average by using those
-averages from array.<br>
-
+averages from array.
+<a href="#" rel="nofollow">Exercise 1 Source Code</a>
  <b>Exercise 2: </b> Develop a program that gets 5 product names and prices from user. Then,
 search product price by entering the product name. (Hint: use HashMap structure and
 JOptionPane window in order to search product price)
