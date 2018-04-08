@@ -47,6 +47,9 @@ student number from ArrayList.
 <a href="https://github.com/ridvancakirtr/System-Programing-Example/blob/master/src/FileExercises/Exercises_4.java">Exercises 4 Source Code</a>
 
 <h3>Two Txt File Compare Using File Chooser</h3>
-
 <b>File Compare: </b> Select 2 txt files and compare  : 
 <a href="https://github.com/ridvancakirtr/System-Programing-Example/tree/master/src/FileChooserCompare">File Compare Source Code</a>
+
+<h3>Write .dat file and read all data Using DataOutputStream</h3>
+<b>Write .dat file: </b> Write .dat file and read data: 
+<a href="https://github.com/ridvancakirtr/System-Programing-Example/tree/master/src/DatFileWriteFile">Write .dat File Source Code</a>
