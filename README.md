@@ -46,3 +46,7 @@ student number from ArrayList.
 <b>Exercises 4: </b> Read File Data : 
 <a href="https://github.com/ridvancakirtr/System-Programing-Example/blob/master/src/FileExercises/Exercises_4.java">Exercises 4 Source Code</a>
 
+<h3>Two Txt File Compare Using File Chooser</h3>
+
+<b>File Compare: </b> Select 2 txt files and compare  : 
+<a href="https://github.com/ridvancakirtr/System-Programing-Example/tree/master/src/FileChooserCompare">File Compare Source Code</a>
