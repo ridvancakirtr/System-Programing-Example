@@ -1,8 +1,6 @@
-package FileChooser;
+package FileChooserCompare;
 
 import javax.swing.*;
-import javax.swing.filechooser.FileFilter;
-import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,7 +8,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class ChoseFile extends Component implements ActionListener{
+public class Chose2FileCompare extends Component implements ActionListener{
     //Select two txt file to compare them
     private JFileChooser fc_1=new JFileChooser();
     private JFileChooser fc_2=new JFileChooser();
@@ -26,7 +24,7 @@ public class ChoseFile extends Component implements ActionListener{
     private JButton button_2;
     private JButton button_3;
 
-    ChoseFile(){
+    Chose2FileCompare(){
         JFrame frame = new JFrame("File Compare");
         frame.setLayout(new FlowLayout());
         frame.setSize(300,200);
@@ -71,13 +69,12 @@ public class ChoseFile extends Component implements ActionListener{
         if (actionEvent.getSource()==button_3){
             if (select1 & select2){
                 try {
-                    do {
+                    while (fin_1.read() != -1 & fin_2.read() != -1){
                         if (fin_1.read()!=fin_2.read()) {
                             isSame = false;
                             break;
                         }
-                    } while (fin_1.read() != -1 & fin_2.read() != -1);
-
+                    }
                     if( isSame )
                         JOptionPane.showMessageDialog(null, "Files are Same");
                     else

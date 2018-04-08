@@ -1,21 +1,19 @@
-package WriteFile;
+package DatFileWriteFile;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.DataInputStream;
 import java.io.DataOutputStream;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
-public class WriteBinaryFile implements ActionListener{
+public class DatFileWriteFile implements ActionListener{
     private JTextField name=new JTextField(10);
     private JTextField number=new JTextField(10);
     private JTextField cgpa=new JTextField(10);
     private JButton button=new JButton("Save");
-    WriteBinaryFile(){
-        JFrame frame = new JFrame();
+    DatFileWriteFile(){
+        JFrame frame = new JFrame("File");
         frame.setLayout(new FlowLayout());
         frame.setSize(200,200);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -29,6 +27,7 @@ public class WriteBinaryFile implements ActionListener{
         frame.add(button);
         button.addActionListener(this);
         frame.setVisible(true);
+        frame.pack();
     }
 
     @Override
@@ -36,6 +35,7 @@ public class WriteBinaryFile implements ActionListener{
         if (actionEvent.getSource()==button){
             saveAllData(name.getText(),Integer.parseInt(number.getText()),Double.parseDouble(cgpa.getText()));
         }
+
     }
 
     private void saveAllData(String name, int number, double cgpa) {
@@ -51,7 +51,7 @@ public class WriteBinaryFile implements ActionListener{
         }catch(Exception e){
             System.out.println(e);
         }
-
+        /*
         try {
             FileInputStream fout=new FileInputStream("file.dat");
             DataInputStream out = new DataInputStream(fout);
@@ -62,7 +62,7 @@ public class WriteBinaryFile implements ActionListener{
             System.out.println("Values: " + a + " " + b + " " + c+" ");
         }catch(Exception e){
             System.out.println(e);
-        }
+        }*/
     }
 
 }

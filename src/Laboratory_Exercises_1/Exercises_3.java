@@ -1,4 +1,4 @@
-package Exercises;
+package Laboratory_Exercises_1;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -6,11 +6,11 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Exercises_6 {
+public class Exercises_3 {
     private String StudentID;
     private String StudentName;
     HashMap<Integer, Student> studentHashMap = new HashMap<>();
-    Exercises_6(){
+    Exercises_3(){
         String studentNumber=JOptionPane.showInputDialog(null,"How Many Student Enter the System ?");
         int totalStudent=Integer.parseInt(studentNumber);
         for (int i=0;i<totalStudent;i++){

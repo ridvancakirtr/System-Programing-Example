@@ -1,7 +1,7 @@
-package FileChooser;
+package FileChooserCompare;
 
 public class Test {
         public static void main(String[] args) {
-                new ChoseFile();
+                new Chose2FileCompare();
         }
 }

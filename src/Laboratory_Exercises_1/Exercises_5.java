@@ -1,15 +1,15 @@
-package Exercises;
+package Laboratory_Exercises_1;
 
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-class Exercises_7 {
+class Exercises_5 {
     private int numberOfStudents=2;
     private int StudentNumber=0;
     private int QuizNote=0;
     ArrayList<StudentDetails> arrayList = new ArrayList<>();
-    Exercises_7(){
+    Exercises_5(){
         for (int i=0;i<numberOfStudents;i++){
             String da=JOptionPane.showInputDialog(null,"Plase Enter Student Number and Quiz Note");
             splitComma(da);
@@ -24,7 +24,7 @@ class Exercises_7 {
         int c, d, swap;
         for (c = 0; c < ( numberOfStudents - 1 ); c++) {
             for (d = 0; d < numberOfStudents - c - 1; d++) {
-                if (arrayList.get(d).QuizNote > arrayList.get(d+1).QuizNote) // For descending order use
+                if (arrayList.get(d).QuizNote < arrayList.get(d+1).QuizNote) // For descending order use
                 {
                     swap       = arrayList.get(d).QuizNote;
                     arrayList.get(d).QuizNote   = arrayList.get(d+1).QuizNote;
