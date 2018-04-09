@@ -5,6 +5,7 @@ students from user with JOptionPane window, and calculate average of each studen
 Then, averages should be kept on an array. Calculate general average by using those
 averages from array.
 
+
 <a href="https://github.com/ridvancakirtr/System-Programing-Example/blob/master/src/Laboratory_Exercises_1/Exercises_1.java">Exercise 1 Source Code</a>
 
  <b>Exercise 2: </b> Develop a program that gets 5 product names and prices from user. Then,
